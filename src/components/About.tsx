@@ -1,5 +1,5 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'framer-motion';
+import profileImage from 'figma:asset/293a454d1966e07b59b5fc01a4792b12039893f1.png';
 
 export function About() {
   return (
@@ -44,9 +44,9 @@ export function About() {
               transition={{ duration: 0.3 }}
               className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative group"
             >
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1666723043169-22e29545675c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b3Jrc3BhY2UlMjBkZXNrfGVufDF8fHx8MTc2NTI4OTYxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Professional workspace"
+              <img
+                src={profileImage}
+                alt="DamiDesign Profile"
                 className="w-full h-full object-cover"
               />
               <motion.div
