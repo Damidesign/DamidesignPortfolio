@@ -1,7 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoImage from 'logo.png.jpg';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,15 +23,8 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="flex items-center group">
-            <motion.img
-              src={logoImage}
-              alt="DamiDesign Logo"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-              className="h-14"
-            />
           </a>
-
+          <a ...>
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item, index) => (
