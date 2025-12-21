@@ -23,10 +23,11 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="flex items-center group">
+          <span className="text-2xl font-bold bg-gradient-to-r
+          DamiDesign
+          </span>
           </a>
-          <a ...>
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
