@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import logoImage from 'figma:asset/31d86c2dc0c7e04ccc26adb9d497567666407ee4.png';
+import logoImage from 'logo.png.jpg';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
