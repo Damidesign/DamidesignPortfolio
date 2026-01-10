@@ -1,5 +1,5 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { ExternalLink, Github } from 'lucide-react';
+import { Figma } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const projects = [
@@ -7,28 +7,25 @@ const projects = [
     id: 1,
     title: 'E-Commerce Platform',
     description: 'A modern e-commerce solution with seamless checkout experience and inventory management.',
-    image: 'https://images.unsplash.com/photo-1679466956264-d020204609ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzY1Mjc5Mjg2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['React', 'TypeScript', 'Tailwind CSS'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    image: 'https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBzaG9wcGluZyUyMG9ubGluZXxlbnwxfHx8fDE3NjgwNTY0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    tags: ['Figma', 'UI/UX', 'Design System'],
+    figma: 'https://www.figma.com/design/KjOZGzZld2HTFtUWm3SBLl/JIFFY?m=auto&t=XFIP2dfk4VeY3oiI-1',
   },
   {
     id: 2,
-    title: 'Mobile Banking App',
-    description: 'Intuitive mobile banking interface with real-time transactions and financial insights.',
-    image: 'https://images.unsplash.com/photo-1605108222700-0d605d9ebafe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY1MzQ0MjczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['React Native', 'Node.js', 'MongoDB'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'Real Estate',
+    description: 'Modern real estate platform featuring property listings, virtual tours, and smart search functionality.',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWFsJTIwZXN0YXRlJTIwcHJvcGVydHl8ZW58MXx8fHwxNzY4MDMxOTA2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    tags: ['Figma', 'UI/UX', 'Design System'],
+    figma: 'https://www.figma.com/design/uWOBJDnD56OFHv5fkOfTtd/DamiDesign-Estate?m=auto&t=XFIP2dfk4VeY3oiI-1',
   },
   {
     id: 3,
-    title: 'Design System',
-    description: 'Comprehensive component library and design system for enterprise applications.',
-    image: 'https://images.unsplash.com/photo-1621111848501-8d3634f82336?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjUzNjk4MDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['Figma', 'React', 'Storybook'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'NFT Card Design',
+    description: 'Creative NFT card designs with dynamic animations and unique digital art collections.',
+    image: 'https://images.unsplash.com/photo-1654183818269-22495f928eb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZnQlMjBkaWdpdGFsJTIwYXJ0fGVufDF8fHx8MTc2ODAyMDIyOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    tags: ['NFT', 'Digital Art', 'Branding'],
+    figma: 'https://www.figma.com/design/FIMx1w3utCVQThX75YCNn8/TYCOON-NFT-Card?m=auto&t=XFIP2dfk4VeY3oiI-1',
   },
 ];
 
@@ -106,22 +103,13 @@ export function Projects() {
                 </div>
                 <div className="flex gap-4 pt-4">
                   <a
-                    href={project.github}
+                    href={project.figma}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-gray-900 hover:text-gray-700 transition-colors"
                   >
-                    <Github size={20} />
-                    Code
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-500 transition-colors"
-                  >
-                    <ExternalLink size={20} />
-                    Live Demo
+                    <Figma size={20} />
+                    Figma
                   </a>
                 </div>
               </div>
