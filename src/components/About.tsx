@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import profileImage from '../assets/profile.jpg';
+import profileImage from 'figma:asset/293a454d1966e07b59b5fc01a4792b12039893f1.png';
+
 export function About() {
   return (
     <section id="about" className="py-20 bg-white">
