@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import profileImage from '../assets/profile.png.jpg';
+import profileImage from '../assets/profile.jpg';
 export function About() {
   return (
     <section id="about" className="py-20 bg-white">
