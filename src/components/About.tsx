@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import profileImage from '../assets/profile.jpg';
 
 export function About() {
   return (
@@ -45,7 +44,7 @@ export function About() {
               className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative group"
             >
               <img
-                src={profileImage}
+                src="/Profile.jpeg"
                 alt="DamiDesign Profile"
                 className="w-full h-full object-cover"
               />
