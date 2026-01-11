@@ -44,7 +44,7 @@ export function About() {
               className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative group"
             >
               <img
-                src="/Profile.jpeg"
+                src="/Profile.jpg"
                 alt="DamiDesign Profile"
                 className="w-full h-full object-cover"
               />
