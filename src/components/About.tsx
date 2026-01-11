@@ -43,9 +43,9 @@ export function About() {
               transition={{ duration: 0.3 }}
               className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative group"
             >
-              {/* THIS IS THE FIX: Capital P and .jpeg extension */}
+              {/* WE ARE USING THE NEW SIMPLE NAME HERE: me.jpg */}
               <img
-                src="/Profile.jpeg"
+                src="/me.jpg"
                 alt="DamiDesign Profile"
                 className="w-full h-full object-cover"
               />
