@@ -49,6 +49,7 @@ export function Contact() {
             <p className="text-lg text-gray-700">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!
             </p>
+
             <div className="space-y-4">
               <motion.div
                 whileHover={{ x: 10 }}
@@ -56,7 +57,7 @@ export function Contact() {
               >
                 <motion.div
                   whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5 }} 
                   className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg"
                 >
                   <Mail size={24} className="text-white" />

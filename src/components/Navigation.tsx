@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,22 +19,22 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-gray-200"
+      className="fixed top-0 left-0 right-0 px-4 sm:px-6 lg:px-8 bg-white/90 dark:bg-black/90 backdrop-blur-sm z-50 border-b border-gray-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="flex items-center group">
             <motion.span
               animate={{
-                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
               transition={{
                 duration: 5,
                 repeat: Infinity,
-                ease: "linear"
+                ease: "linear",
               }}
               style={{
-                backgroundSize: '200% 200%',
+                backgroundSize: "200% 200%",
               }}
               className="text-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
             >
@@ -58,12 +59,15 @@ export function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -71,7 +75,7 @@ export function Navigation() {
           {isOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="md:hidden py-4 space-y-2"

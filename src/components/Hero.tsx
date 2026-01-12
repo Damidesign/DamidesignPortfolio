@@ -1,9 +1,12 @@
-import { ArrowDown, Github, MessageCircle, Mail, Sparkles } from 'lucide-react';
-import { motion } from 'motion/react';
+import { ArrowDown, Github, MessageCircle, Mail, Sparkles } from "lucide-react";
+import { motion } from "motion/react";
 
 export function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 pt-16 relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 pt-16 relative overflow-hidden"
+    >
       {/* Animated background elements */}
       <motion.div
         animate={{
@@ -14,7 +17,7 @@ export function Hero() {
         transition={{
           duration: 20,
           repeat: Infinity,
-          ease: "linear"
+          ease: "linear",
         }}
         className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-3xl"
       />
@@ -27,11 +30,11 @@ export function Hero() {
         transition={{
           duration: 15,
           repeat: Infinity,
-          ease: "linear"
+          ease: "linear",
         }}
         className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full blur-3xl"
       />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
         <div className="space-y-8">
           <motion.div
@@ -45,22 +48,22 @@ export function Hero() {
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             >
               <h1 className="text-5xl sm:text-6xl lg:text-7xl text-gray-900">
-                Hi, I'm{' '}
+                Hi, I'm{" "}
                 <motion.span
                   animate={{
-                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                   }}
                   transition={{
                     duration: 5,
                     repeat: Infinity,
-                    ease: "linear"
+                    ease: "linear",
                   }}
                   style={{
-                    backgroundSize: '200% 200%',
+                    backgroundSize: "200% 200%",
                   }}
                   className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent inline-block"
                 >
@@ -135,7 +138,7 @@ export function Hero() {
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600"
-                initial={{ x: '-100%' }}
+                initial={{ x: "-100%" }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
               />
@@ -146,7 +149,7 @@ export function Hero() {
                   transition={{
                     duration: 1.5,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: "easeInOut",
                   }}
                 >
                   <ArrowDown size={20} />
@@ -164,7 +167,7 @@ export function Hero() {
             transition={{
               duration: 6,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
             className="absolute top-1/4 right-1/4 text-purple-400 opacity-20"
           >
@@ -178,7 +181,7 @@ export function Hero() {
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
             className="absolute bottom-1/4 left-1/4 text-blue-400 opacity-20"
           >
