@@ -42,78 +42,87 @@ export function Projects() {
         >
           Featured Projects
         </motion.h2>
+
+        {/* Projects Card */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <a
               key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ 
-                y: -12,
-                rotate: [0, -1, 1, 0],
-                transition: { duration: 0.3 }
-              }}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group"
+              href={project.figma}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+              aria-labelledby={`project-title-${project.id}`}
+              aria-describedby={`project-desc-${project.id}`}
             >
-              <div className="aspect-video overflow-hidden relative">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.4 }}
-                  className="w-full h-full"
-                >
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end justify-center pb-4"
-                >
-                  <motion.span
-                    initial={{ y: 20 }}
-                    whileHover={{ y: 0 }}
-                    className="text-white px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm"
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{
+                  y: -12,
+                  rotate: [0, -1, 1, 0],
+                  transition: { duration: 0.3 },
+                }}
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group"
+              >
+                <div className="aspect-video overflow-hidden relative">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.4 }}
+                    className="w-full h-full"
                   >
-                    View Details
-                  </motion.span>
-                </motion.div>
-              </div>
-              <div className="p-6 space-y-4">
-                <h3 className="text-2xl text-gray-900">{project.title}</h3>
-                <p className="text-gray-600">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
+                    <ImageWithFallback
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end justify-center pb-4"
+                  >
                     <motion.span
-                      key={tag}
-                      initial={{ opacity: 0, scale: 0 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 + tagIndex * 0.05 }}
-                      whileHover={{ scale: 1.1 }}
-                      className="px-3 py-1 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-full text-sm cursor-default"
+                      initial={{ y: 20 }}
+                      whileHover={{ y: 0 }}
+                      className="text-white px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm"
                     >
-                      {tag}
+                      View Details
                     </motion.span>
-                  ))}
+                  </motion.div>
                 </div>
-                <div className="flex gap-4 pt-4">
-                  <a
-                    href={project.figma}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-900 hover:text-gray-700 transition-colors"
-                  >
-                    <Figma size={20} />
-                    Figma
-                  </a>
+                <div className="p-6 space-y-4">
+                  <h3 className="text-2xl text-gray-900">{project.title}</h3>
+                  <p className="text-gray-600">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <motion.span
+                        key={tag}
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 + tagIndex * 0.05 }}
+                        whileHover={{ scale: 1.1 }}
+                        className="px-3 py-1 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-full text-sm cursor-default"
+                      >
+                        {tag}
+                      </motion.span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4 pt-4">
+                    <div
+                      className="flex items-center gap-2 text-gray-900 hover:text-gray-700 transition-all duration-300 ease-in-out"
+                      aria-hidden="true"
+                    >
+                      <Figma size={20} />
+                      Figma
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </a>
           ))}
         </div>
       </div>
