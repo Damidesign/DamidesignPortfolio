@@ -31,25 +31,9 @@ export function About() {
               When I'm not coding or designing, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the community.
             </p>
 
-            {/* --- CV DOWNLOAD BUTTON START --- */}
-            <div className="pt-4">
-              <a 
-                href="/CV.pdf"   // <--- FIXED: Capital C and V to match your file
-                download="DamiDesign_CV.pdf"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-medium hover:bg-gray-700 dark:hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                Download CV
-              </a>
-            </div>
-            {/* --- CV DOWNLOAD BUTTON END --- */}
-            
-            {/* --- SOCIAL MEDIA ICONS --- */}
-            <div className="flex gap-4 pt-2">
+            {/* --- SOCIAL MEDIA ICONS START HERE --- */}
+            <div className="flex gap-4 pt-4">
+              
               {/* LinkedIn */}
               <a 
                 href="https://www.linkedin.com/in/damilola-olowo-8263b523a/" 
@@ -93,9 +77,12 @@ export function About() {
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
               </a>
+
             </div>
+            {/* --- SOCIAL MEDIA ICONS END HERE --- */}
 
           </motion.div>
+          
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
