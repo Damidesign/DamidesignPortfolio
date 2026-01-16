@@ -34,8 +34,8 @@ export function About() {
             {/* --- CV DOWNLOAD BUTTON START --- */}
             <div className="pt-4">
               <a 
-                href="/cv.pdf"   // <--- This looks for the file in your public folder
-                download="DamiDesign_CV.pdf" // <--- This is the name the user saves it as
+                href="/CV.pdf"   // <--- FIXED: Capital C and V to match your file
+                download="DamiDesign_CV.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-medium hover:bg-gray-700 dark:hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -47,7 +47,7 @@ export function About() {
               </a>
             </div>
             {/* --- CV DOWNLOAD BUTTON END --- */}
-
+            
             {/* --- SOCIAL MEDIA ICONS --- */}
             <div className="flex gap-4 pt-2">
               {/* LinkedIn */}
