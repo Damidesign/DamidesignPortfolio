@@ -125,4 +125,24 @@ export function Projects() {
                     <div className="mt-auto flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium group-hover:gap-3 transition-all">
                       <Figma size={18} />
                       <span>Open in Figma</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </motion.div>
+              </a>
+            ))}
+
+          </div>
+          
+          {/* Gradient fade on the right to indicate scrolling */}
+          <div className="absolute right-0 top-0 bottom-12 w-24 bg-gradient-to-l from-gray-50 dark:from-gray-800 to-transparent pointer-events-none md:block hidden" />
+        </div>
+        {/* --- SCROLLING CONTAINER END --- */}
+
+      </div>
+    </section>
+  );
+}
